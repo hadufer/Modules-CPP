@@ -1,6 +1,6 @@
 #include "class.h"
 #include <cstddef>
-#include <string>
+#include <cstring>
 
 Contact::Contact(char *firstName, char *lastName, char *nickName, char *phoneNumber, char *darkestSecret)
 {
@@ -61,11 +61,46 @@ Contact::~Contact()
 
 Contact &Contact::operator=(const Contact &c)
 {
-	this->firstName = c.firstName;
-	this->lastName = c.lastName;
-	this->nickName = c.nickName;
-	this->phoneNumber = c.phoneNumber;
-	this->darkestSecret = c.darkestSecret;
+	if (c.firstName)
+	{
+		if (this->firstName)
+			delete [] this->firstName;
+ 		this->firstName = strdup(c.firstName);
+	}
+	else
+		this->firstName = NULL;
+	if (c.lastName)
+	{
+		if (this->lastName)
+			delete [] this->lastName;
+		this->lastName = strdup(c.lastName);
+	}
+	else
+		this->lastName = NULL;
+	if (c.nickName)
+	{
+		if (this->nickName)
+			delete [] this->nickName;
+		this->nickName = strdup(c.nickName);
+	}
+	else
+		this->nickName = NULL;
+	if (c.phoneNumber)
+	{
+		if (this->phoneNumber)
+			delete [] this->phoneNumber;
+		this->phoneNumber = strdup(c.phoneNumber);
+	}
+	else
+		this->phoneNumber = NULL;
+	if (c.darkestSecret)
+	{
+		if (this->darkestSecret)
+			delete [] this->darkestSecret;
+		this->darkestSecret = strdup(c.darkestSecret);
+	}
+	else
+		this->darkestSecret = NULL;
 	return *this;
 }
 
@@ -90,12 +125,6 @@ PhoneBook::PhoneBook(const PhoneBook &p)
 
 PhoneBook::~PhoneBook()
 {
-	tab_index = 0;
-	for (int i  = 0; i <= 7; i++)
-	{
-		if (tab[i].firstName)
-			tab[i].~Contact();
-	}
 }
 
 PhoneBook &PhoneBook::operator=(const PhoneBook &c)
@@ -112,7 +141,7 @@ PhoneBook &PhoneBook::operator=(const PhoneBook &c)
 void PhoneBook::add(const Contact &c)
 {
 	if (tab_index == 7)
-		tab_index = -1;
+		tab_index = 0;
 	tab[tab_index] = c;
 	tab_index++;
 }

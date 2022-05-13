@@ -9,7 +9,7 @@ class Contact {
 	char	*phoneNumber;
 	char	*darkestSecret;
 
-	Contact(char *firstName = nullptr, char *lastName = nullptr, char *nickName = nullptr, char *phoneNumber = nullptr, char *darkestSecret = nullptr);
+	Contact(char *firstName = NULL, char *lastName = NULL, char *nickName = NULL, char *phoneNumber = NULL, char *darkestSecret = NULL);
 	Contact(const Contact &c);
 	~Contact();
 	Contact &operator=(const Contact &c);
