@@ -4,7 +4,6 @@
 #include <string>
 #include <cstring>
 #include <limits>
-			#include <cstdio>
 
 int	main()
 {
