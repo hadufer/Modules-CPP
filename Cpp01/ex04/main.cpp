@@ -27,16 +27,19 @@ int main(int argc, char **argv)
 	{
 		for (size_t i = 0; i < buffRead.size(); i++)
 		{
-			if (strcmp(buffRead.c_str() + i, argv[3]) == 0)
+			if (strncmp(buffRead.c_str() + i, argv[3], strlen(argv[3])) == 0)
 			{
 				// std::cout << "IN" << std::endl;
-				i += strlen(argv[3]);
+				i += strlen(argv[3]); 
+				buffToWrite += argv[2];
+				i -= 1;
 			}
 			else
 			{
 				buffToWrite.push_back(buffRead[i]);
 			}
 		}
-		std::cout << buffToWrite;
+		buffToWrite += '\n';
 	}
+	fileO << buffToWrite;
 }
