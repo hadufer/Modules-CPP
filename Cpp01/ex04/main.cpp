@@ -29,7 +29,6 @@ int main(int argc, char **argv)
 		{
 			if (strncmp(buffRead.c_str() + i, argv[3], strlen(argv[3])) == 0)
 			{
-				// std::cout << "IN" << std::endl;
 				i += strlen(argv[3]); 
 				buffToWrite += argv[2];
 				i -= 1;
