@@ -15,6 +15,11 @@ int main(int argc, char **argv)
 	std::ofstream fileO;
 	std::ifstream fileI;
 	fileI.open(argv[1]);
+	if (!fileI.is_open())
+	{
+		std::cout << "File can't be created\n";
+		return -1;
+	}
 	fileO.open(fileName.c_str());
 	if (!fileO.is_open())
 	{

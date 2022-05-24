@@ -40,9 +40,6 @@ void Harl::complain(std::string level)
 
     for (int i = 0; i < 4; i++)
     {
-        if (strcmp(level.c_str(), levelInfo[i].c_str()) == 0)
-        {
-            (this->*fncptr[i])();
-        }
+        (strcmp(level.c_str(), levelInfo[i].c_str()) == 0 ? (this->*fncptr[i])() : (void)0);
     }
 }
