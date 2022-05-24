@@ -18,6 +18,16 @@ class Fixed{
     int toInt( void ) const;
     float toFloat( void ) const;
     Fixed &operator=(const Fixed &f);
+    Fixed operator-(const Fixed &b) const;
+    Fixed operator+(const Fixed &b) const;
+    Fixed operator*(const Fixed &b) const;
+    Fixed operator/(const Fixed &b) const;
+    bool operator>(const Fixed &b) const;
+    bool operator<(const Fixed &b) const;
+    bool operator>=(const Fixed &b) const;
+    bool operator<=(const Fixed &b) const;
+    bool operator==(const Fixed &b) const;
+    bool operator!=(const Fixed &b) const;
 };
 
 std::ostream &operator<<(std::ostream &o, const Fixed &f);

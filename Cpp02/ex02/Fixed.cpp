@@ -75,35 +75,35 @@ Fixed Fixed::operator/(const Fixed &b) const
 	return (Fixed(toFloat() / b.toFloat()));
 }
 
-// bool Fixed::operator<(const Fixed &b)
-// {
-// 	return ( toFloat() < b.toFloat() ? 1 : 0);
-// }
+bool Fixed::operator<(const Fixed &b) const
+{
+	return ( toFloat() < b.toFloat() ? 1 : 0);
+}
 
-// bool Fixed::operator>(const Fixed &b)
-// {
-// 	return ( toFloat() > b.toFloat() ? 1 : 0);
-// }
+bool Fixed::operator>(const Fixed &b) const
+{
+	return ( toFloat() > b.toFloat() ? 1 : 0);
+}
 
-// bool Fixed::operator>=(const Fixed &b)
-// {
-// 	return ( toFloat() >= b.toFloat() ? 1 : 0);
-// }
+bool Fixed::operator>=(const Fixed &b) const
+{
+	return ( toFloat() >= b.toFloat() ? 1 : 0);
+}
 
-// bool Fixed::operator<=(const Fixed &b)
-// {
-// 	return ( toFloat() <= b.toFloat() ? 1 : 0);
-// }
+bool Fixed::operator<=(const Fixed &b) const
+{
+	return ( toFloat() <= b.toFloat() ? 1 : 0);
+}
 
-// bool Fixed::operator==(const Fixed &b)
-// {
-// 	return ( toFloat() == b.toFloat() ? 1 : 0);
-// }
+bool Fixed::operator==(const Fixed &b) const
+{
+	return ( toFloat() == b.toFloat() ? 1 : 0);
+}
 
-// bool Fixed::operator!=(const Fixed &b)
-// {
-// 	return ( toFloat() != b.toFloat() ? 1 : 0);
-// }
+bool Fixed::operator!=(const Fixed &b) const
+{
+	return ( toFloat() != b.toFloat() ? 1 : 0);
+}
 
 // Fixed &Fixed::operator++()
 // {
