@@ -28,6 +28,12 @@ class Fixed{
     bool operator<=(const Fixed &b) const;
     bool operator==(const Fixed &b) const;
     bool operator!=(const Fixed &b) const;
+	Fixed &operator--() ;
+	Fixed operator--(int) ;
+	Fixed &operator++() ;
+	Fixed operator++(int) ;
+	static Fixed min( const Fixed &a, const Fixed &b);
+	static Fixed max( const Fixed &a, const Fixed &b);
 };
 
 std::ostream &operator<<(std::ostream &o, const Fixed &f);
