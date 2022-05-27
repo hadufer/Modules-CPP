@@ -16,6 +16,15 @@ ClapTrap::~ClapTrap()
 	std::cout << "ClapTrap Destructor called" << std::endl;
 }
 
+ClapTrap::ClapTrap(const ClapTrap &c)
+{
+	m_name = c.m_name;
+	m_hitPoint = c.m_hitPoint;
+	m_energyPoint = c.m_energyPoint;
+	m_attackDamage = c.m_attackDamage;
+	std::cout << "ClapTrap Default constructor called" << std::endl;
+}
+
 ClapTrap &ClapTrap::operator=(const ClapTrap &c)
 {
 	m_name = c.m_name;
