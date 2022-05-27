@@ -1,7 +1,7 @@
 #include "FragTrap.h"
 #include <iostream>
 
-FragTrap::FragTrap()
+FragTrap::FragTrap() : ClapTrap()
 {
     std::cout << "FragTrap default constructor called" << std::endl;
     m_attackDamage = 30;

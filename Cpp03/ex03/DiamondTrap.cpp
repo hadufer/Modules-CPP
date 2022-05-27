@@ -1,10 +1,9 @@
 #include "DiamondTrap.h"
 #include <iostream>
 
-DiamondTrap::DiamondTrap()
+DiamondTrap::DiamondTrap() : ClapTrap()
 {
     std::cout << "DiamondTrap default constructor called" << std::endl;
-    m_name = "";
     m_attackDamage = FragTrap::m_hitPoint;
     m_energyPoint = ScavTrap::m_energyPoint;
     m_hitPoint = FragTrap::m_hitPoint;
