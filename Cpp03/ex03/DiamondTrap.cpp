@@ -18,9 +18,8 @@ DiamondTrap::DiamondTrap(const DiamondTrap &s)
     m_hitPoint = s.m_hitPoint;
 }
 
-DiamondTrap::DiamondTrap(std::string name)
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name")
 {
-    ClapTrap::m_name = name +  "_clap_name";
     std::cout << "DiamondTrap constructor called" << std::endl;
     m_name = name;
     m_attackDamage = FragTrap::m_hitPoint;

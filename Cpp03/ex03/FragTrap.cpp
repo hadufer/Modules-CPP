@@ -1,16 +1,15 @@
 #include "FragTrap.h"
 #include <iostream>
 
-FragTrap::FragTrap() : ClapTrap()
+FragTrap::FragTrap()
 {
     std::cout << "FragTrap default constructor called" << std::endl;
-    m_name = "";
     m_attackDamage = 30;
     m_energyPoint = 100;
     m_hitPoint = 100;
 }
 
-FragTrap::FragTrap(const FragTrap &s) : ClapTrap(s)
+FragTrap::FragTrap(const FragTrap &s)
 {
     m_name = s.m_name;
     m_attackDamage = s.m_attackDamage;

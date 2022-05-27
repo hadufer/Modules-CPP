@@ -34,8 +34,9 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &c)
 	return *this;
 }
 
-ClapTrap::ClapTrap(std::string name) : m_name( name )
+ClapTrap::ClapTrap(std::string name)
 {
+	m_name = name;
 	m_hitPoint = 10;
 	m_energyPoint = 10;
 	m_attackDamage = 0;
