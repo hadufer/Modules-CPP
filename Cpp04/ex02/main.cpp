@@ -1,6 +1,7 @@
 #include "Animal.h"
 #include <iostream>
 
+// Function used to show the purposer of Interface
 void    printTest(Animal *a)
 {
     a->makeSound();
