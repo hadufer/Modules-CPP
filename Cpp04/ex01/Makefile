@@ -1,9 +1,9 @@
-NAME = Polymorphism
+NAME = IDontWantToBurnTheWorld
 CC = c++
 RM = rm -f
 CFLAGS = -g -Wall -Werror -Wextra -std=c++98
 
-SRCS = main.cpp Animal.cpp 
+SRCS = main.cpp Animal.cpp Brain.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
