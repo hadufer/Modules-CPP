@@ -8,8 +8,8 @@ class Form{
     private:
         const std::string m_name;
         bool m_isSigned;
-        int m_gradeToSign;
-        int m_gradeToExecute;
+        const int m_gradeToSign;
+        const int m_gradeToExecute;
     public:
         Form(const std::string name = "", int gradeToSign = 150, int gradeToExecute = 150);
         Form(const Form &f);

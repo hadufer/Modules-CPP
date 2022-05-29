@@ -1,4 +1,4 @@
-NAME = ReapeatException
+NAME = InLineLarva
 CC = c++
 RM = rm -f
 CFLAGS = -g -Wall -Werror -Wextra -std=c++98

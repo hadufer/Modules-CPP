@@ -1,32 +1,24 @@
 #include "Form.h"
 #include <iostream>
 
-Form::Form(const std::string name, int gradeToSign, int gradeToExecute) : m_name(name)
+Form::Form(const std::string name, int gradeToSign, int gradeToExecute) : m_name(name), m_gradeToSign(gradeToSign), m_gradeToExecute(gradeToExecute)
 {
         if (gradeToSign > 150 || gradeToExecute > 150)
             throw Form::GradeTooLowException();
         else if (gradeToSign < 1  || gradeToExecute < 1)
             throw Form::GradeTooHighException();
         else
-        {
             m_isSigned = 0;
-            m_gradeToExecute = gradeToExecute;
-            m_gradeToSign = gradeToSign;
-        }
 }
 
-Form::Form(const Form &b) : m_name(b.m_name)
+Form::Form(const Form &b) : m_name(b.m_name), m_gradeToSign(b.m_gradeToSign), m_gradeToExecute(b.m_gradeToExecute)
 {
         if (b.m_gradeToSign > 150 || b.m_gradeToExecute > 150)
             throw Form::GradeTooLowException();
         else if (b.m_gradeToSign < 1  || b.m_gradeToExecute < 1)
             throw Form::GradeTooHighException();
         else
-        {
             m_isSigned = b.m_isSigned;
-            m_gradeToExecute = b.m_gradeToExecute;
-            m_gradeToSign = b.m_gradeToSign;
-        }
 }
 
 Form &Form::operator=(const Form &b)
@@ -36,11 +28,7 @@ Form &Form::operator=(const Form &b)
         else if (b.m_gradeToSign < 1  || b.m_gradeToExecute < 1)
             throw Form::GradeTooHighException();
         else
-        {
             m_isSigned = b.m_isSigned;
-            m_gradeToExecute = b.m_gradeToExecute;
-            m_gradeToSign = b.m_gradeToSign;
-        }
     return *this;
 }
 
