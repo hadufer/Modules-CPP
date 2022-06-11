@@ -64,16 +64,3 @@ class Array{
                 { return (char *)"BadIndexException";}
         };
 };
-
-template<typename T> std::ostream	&operator<<(std::ostream &o, const Array<T> &array)
-{
-	unsigned int	max = 5;
-
-	o << "[" << array.getArrSize() << "] ";
-	for (unsigned int i = 0; i < array.getArrSize() && i < max; i++)
-		o << array[i] << " ";
-	if (max < array.getArrSize())
-		o << "...";
-	o << std::endl;
-	return (o);
-}
