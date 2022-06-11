@@ -1,7 +1,7 @@
 #pragma once
 
 template<typename arrayType>
-void iter(arrayType *arr, int arraySize, void (*f)(arrayType &a))
+void iter(const arrayType *arr, int arraySize, void (*f)(const arrayType &a))
 {
     for (int i = 0; i < arraySize; i++)
     {
