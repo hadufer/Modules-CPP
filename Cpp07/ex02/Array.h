@@ -53,6 +53,11 @@ class Array{
             return mArrSize;
         }
 
+        unsigned int size() const
+        {
+            return getArrSize();
+        }
+
         class BadIndexException : public std::exception {
             public:
                 const char *what() const throw()
